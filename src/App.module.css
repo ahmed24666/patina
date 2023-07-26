@@ -1,0 +1,20 @@
+.gallery-setting {
+    width: 100%;
+    margin-bottom: 40px;
+}
+.gallery-setting h1 {
+    color: var(--gold-white-100);
+    font-size: 2rem;
+    font-weight: bold;
+}
+.app{
+    position: relative;
+}
+@media (max-width:500px) {
+    .gallery-setting {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+}

@@ -1,0 +1,33 @@
+@import "./css-reset.css";
+
+:root {
+    --dark-100: #4e4e4e;
+    --white-gold: #fffaf2;
+    --dark-nav: #2c2c2c;
+    --gold: #dfb06e;
+    --gold-white-100: #df9c3f;
+}
+
+body {
+    background: var(--white-gold);
+}
+
+/* my own classes */
+.flex {
+    display: flex;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-row {
+    flex-direction: row;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.align-items-center {
+    align-items: center;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
