@@ -45,12 +45,16 @@ const Nav = () => {
             </div>
             <div className={`${styles["slideDown"]}`} style={open?{top:'0'}:{top:'-100vh'}}>
                 <ul className={`flex align-items-center ${styles["slideDown-nav"]}`}  style={open?{display:'flex',opacity:'1',transition:'1s ease-in-out 1s'}:{transition:'none'}}>
-                    <li className={`${styles["nav-item"]} ${styles.active}`}>
-                        <a href="" className={styles["nav-link"]}>Home</a>
-                    </li>
-                    <li className={styles["nav-item"]}>
+                    <Link to='/' >
+                        <li className={`${styles["nav-item"]} ${location.pathname==='/'&&styles.active}`} onClick={()=>setopen(false)}>
+                            <a href="" className={styles["nav-link"]}>Home</a>
+                        </li>
+                    </Link>
+                    <Link to='/shop'>
+                    <li className={`${styles["nav-item"]} ${location.pathname.startsWith('/shop')&&styles.active}`}onClick={()=>setopen(false)}>
                         <a href="" className={styles["nav-link"]}>Shop</a>
                     </li>
+                    </Link>
                     <li className={styles["nav-item"]}>
                         <a href="" className={styles["nav-link"]}>Artists</a>
                     </li>
