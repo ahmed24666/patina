@@ -58,7 +58,7 @@ const Shop = () => {
                     <div
                         className={`${styles["gallery-setting"]} flex justify-content-between align-items-center`}
                     >
-                        <h1>All images</h1>
+                        <h1>All Products</h1>
                         <Dropdown
                             title="All Images"
                             items={ddItems}

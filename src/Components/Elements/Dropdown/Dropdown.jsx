@@ -9,43 +9,24 @@ import { PropTypes } from 'prop-types';
 
 // import other component to use
 import Button from "../Button/Button"
+import images from "../../../Jsons/Images.json";
 
 // Dropdown Component
 const Dropdown = ({ items, title, liftingDdTextUp }) => {
-  const [ ddTitle, setDdTitle ] = useState(title)
-  const [ddItemsState, setDdItem] = useState(items)
-
-  const ddItem = (ddId, ev) => {
-    const ddTitle = ev.target.innerHTML
-    activeDropDownItem(ddId)
-    setDdTitle(ddTitle)
-    liftingDdTextUp && liftingDdTextUp(ddTitle)
-  }
-    
-  const activeDropDownItem = (dropdownItemId) => {
-    setDdItem(prev => {
-      prev.forEach(item => item.active = false)
-      const myDd = prev.find(ddId => ddId.id === dropdownItemId)
-      myDd.active = true
-      return [ ...prev ]
-    })
-  }
 
   return (
     <div className={styles["dropdown"]}>
       <Button theme="transparent" className="flex align-items-center">
-        { ddTitle }
+        All Items
         <span className={styles["dropdown-arrow-icon"]}>
           <ArrowUp3 color="var(--gold)" />
         </span>
       </Button>
       <ul className={styles["dropdown-menu"]}>
-        {ddItemsState.map(item => (
+        {images.categories.cat.map(item => (
           <li 
-            key={item.id}
-            className={`${styles["dropdown-item-menu"]} ${item.active && styles.active}`}
-            onClick={(ev) => ddItem(item.id, ev)}>
-              { item.title }
+            className={`${styles["dropdown-item-menu"]} ${item.active && styles.active}`}>
+              { item.categories }
           </li>
         ))}
       </ul>

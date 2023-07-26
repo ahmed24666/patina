@@ -29,7 +29,7 @@ const Header = ({title1,title2,title3,title4,word,word2}) => {
               {title2&&title2} <br />
               {title3&&title3} <span>{word&&word}</span> {word2&&word2}
             </h1>
-            {title4&&<h2 className={styles["heading-header-title"]} style={{marginTop:'25px'}}>{title4}</h2>}
+            {title4&&<h2 className={styles["heading-header-title"]} style={{marginTop:'25px',color:'black'}}>{title4}</h2>}
 
             {/* <div className={`${styles["search-bar"]} flex align-items-center`}>
               <SearchNormal1 size="30" color="var(--dark-100)"/>

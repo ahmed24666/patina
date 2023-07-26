@@ -44,7 +44,7 @@
     width: 10px;
     height: 10px;
     background-color: var(--gold);
-    box-shadow: 0 0 1px 3px var(--white-gold);
+    box-shadow: 0 0 1px 3px transparent;
     border-radius: 4px;
 }
 .heading-header-second-title {
